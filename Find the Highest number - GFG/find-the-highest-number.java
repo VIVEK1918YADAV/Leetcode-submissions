@@ -36,19 +36,29 @@ class Solution
 {
     public int findPeakElement(List<Integer> a)
     {
-        int n = a.size();
-        int start = 0;
-        int end = n-1;
+        // int n = a.size();
+        // int start = 0;
+        // int end = n-1;
         
-        while(start < end){
-            int mid = start + (end-start)/2;
-            if(a.get(mid) > a.get(mid+1)){
-                end = mid;
-            }
-            else{
-                start = mid+1;
-            }
-        }
-        return a.get(start);
+        // while(start < end){
+        //     int mid = start + (end-start)/2;
+        //     if(a.get(mid) > a.get(mid+1)){
+        //         end = mid;
+        //     }
+        //     else{
+        //         start = mid+1;
+        //     }
+        // }
+        // return a.get(start);
+        
+        
+         //Approach -> 2
+         int max = 0;
+         for(Integer ans : a){
+             if(ans > max){
+                 max = ans;
+             }
+         }
+         return max;
     }
 }
