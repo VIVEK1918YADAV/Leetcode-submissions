@@ -21,12 +21,11 @@ class GFG {
 //User function Template for Java
 class Solution {
     static long isPerfectSquare(long n){
-       if (n == 1) return 1;
-       int out = 1;
-       for (int i=1; i<n; i++){
-           if (out + i+i + 1 <= n) out = out + i+i + 1;
-           else break;
+       long m = (long)Math.sqrt(n);
+       if(n == m*m){
+           return 1;
        }
-       return out == n ? 1 : 0;
+       else
+       return 0;
     }
 }
